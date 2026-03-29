@@ -1,4 +1,11 @@
 ﻿using System;
+public class HaloGeneric
+{
+    public void SapaUser<T>(T input)
+    {
+        Console.WriteLine("Halo user " + input);
+    }
+}
 public class DataGeneric<T>
 {
     private T data;
@@ -16,6 +23,8 @@ class Program
 {
     static void Main(string[] args)
     {
+        HaloGeneric halo = new HaloGeneric();
+        halo.SapaUser<string>("Rayhan");
         DataGeneric<string> dataNIM = new DataGeneric<string>("103022400107");
         dataNIM.PrintData();
     }
